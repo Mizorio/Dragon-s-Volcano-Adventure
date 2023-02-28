@@ -7,7 +7,7 @@ var score = 0;
 // Load images
 function preload() {
   dragonImg = loadImage('dragon.png');
-  volcanoImg = loadImage('dragon1.png');
+  volcanoImg = loadImage('dragon.png');
 }
 
 // Set up the game
