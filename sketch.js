@@ -1,3 +1,4 @@
+//According to java
 // Variables defined
 var dragonImg, volcanoImg;
 var dragon, volcanoes;
@@ -12,7 +13,7 @@ function preload() {
 
 // Set up the game
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(windowWidth, windowHeight);
   dragon = new Dragon();
   volcanoes = [new Volcano(), new Volcano(width + 400), new Volcano(width + 600)];
   score = 0;
@@ -56,6 +57,10 @@ function draw() {
     volcanoes.push(new Volcano(width + 300));
   }
 }
+//Access to touch
+function touchStarted() {
+  dragon.jump();
+}
 
 // Handle keyboard input
 function keyPressed() {
@@ -73,9 +78,14 @@ function Dragon() {
   this.lift = -15;
   
   this.display = function() {
-    image(dragonImg, this.x, this.y, 64, 64);
+    image(dragonImg, this.x, this.y, width*0.1, height*0.1);
   };
   
+  this.display = function() {
+    image(volcanoImg, this.x, this.y, width*0.2, height*0.2);
+  };
+  
+
   this.update = function() {
     // Apply gravity
     this.vy += this.gravity;
