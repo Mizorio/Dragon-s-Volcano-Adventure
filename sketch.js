@@ -13,7 +13,7 @@ function preload() {
 
 // Set up the game
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(640, 480);
   dragon = new Dragon();
   volcanoes = [new Volcano(), new Volcano(width + 400), new Volcano(width + 600)];
   score = 0;
