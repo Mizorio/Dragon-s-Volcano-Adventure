@@ -78,11 +78,11 @@ function Dragon() {
   this.lift = -15;
   
   this.display = function() {
-    image(dragonImg, this.x, this.y, width*0.1, height*0.1);
+    image(volcanoImg, this.x, this.y, width*0.1, height*0.1);
   };
   
   this.display = function() {
-    image(volcanoImg, this.x, this.y, width*0.2, height*0.2);
+    image(dragonImg, this.x, this.y, width*0.2, height*0.2);
   };
   
 
